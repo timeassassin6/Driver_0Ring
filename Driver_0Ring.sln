@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Driver Test Program", "Driver Test Program\Driver Test Program.vcxproj", "{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Driver|ARM = Driver|ARM
+		Driver|ARM64 = Driver|ARM64
+		Driver|x64 = Driver|x64
+		Driver|x86 = Driver|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM.Build.0 = Debug|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM64.Build.0 = Debug|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x64.ActiveCfg = Debug|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x64.Build.0 = Debug|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x64.Deploy.0 = Debug|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x86.Build.0 = Debug|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Debug|x86.Deploy.0 = Debug|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|ARM.ActiveCfg = Driver|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|ARM.Build.0 = Driver|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|ARM64.ActiveCfg = Driver|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|ARM64.Build.0 = Driver|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|x64.ActiveCfg = Driver|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|x64.Build.0 = Driver|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|x86.ActiveCfg = Debug|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Driver|x86.Build.0 = Debug|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM.ActiveCfg = Release|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM.Build.0 = Release|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM.Deploy.0 = Release|ARM
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM64.ActiveCfg = Release|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM64.Build.0 = Release|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|ARM64.Deploy.0 = Release|ARM64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x64.ActiveCfg = Release|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x64.Build.0 = Release|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x64.Deploy.0 = Release|x64
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x86.ActiveCfg = Release|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x86.Build.0 = Release|Win32
+		{1B3EF8EE-5BA5-403D-BAD3-54425465EADF}.Release|x86.Deploy.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B230D344-30CB-4904-A16D-4B091F494514}
+	EndGlobalSection
+EndGlobal

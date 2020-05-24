@@ -1,0 +1,86 @@
+;
+; DriverTestProgram.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=Sample ; TODO: edit Class
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Provider=%ManufacturerName%
+CatalogFile=DriverTestProgram.cat
+DriverVer= ; TODO: set DriverVer in stampinf property pages
+
+[DestinationDirs]
+DefaultDestDir = 12
+DriverTestProgram_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=SampleClassReg
+
+[SampleClassReg]
+HKR,,,0,%ClassName%
+HKR,,Icon,,-5
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+DriverTestProgram.sys  = 1,,
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+%DriverTestProgram.DeviceDesc%=DriverTestProgram_Device, Root\DriverTestProgram ; TODO: edit hw-id
+
+[DriverTestProgram_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+DriverTestProgram.sys
+
+;-------------- Service installation
+[DriverTestProgram_Device.NT.Services]
+AddService = DriverTestProgram,%SPSVCINST_ASSOCSERVICE%, DriverTestProgram_Service_Inst
+
+; -------------- DriverTestProgram driver install sections
+[DriverTestProgram_Service_Inst]
+DisplayName    = %DriverTestProgram.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\DriverTestProgram.sys
+
+;
+;--- DriverTestProgram_Device Coinstaller installation ------
+;
+
+[DriverTestProgram_Device.NT.CoInstallers]
+AddReg=DriverTestProgram_Device_CoInstaller_AddReg
+CopyFiles=DriverTestProgram_Device_CoInstaller_CopyFiles
+
+[DriverTestProgram_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll,WdfCoInstaller"
+
+[DriverTestProgram_Device_CoInstaller_CopyFiles]
+WdfCoInstaller$KMDFCOINSTALLERVERSION$.dll
+
+[DriverTestProgram_Device.NT.Wdf]
+KmdfService =  DriverTestProgram, DriverTestProgram_wdfsect
+[DriverTestProgram_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+ClassName="Samples" ; TODO: edit ClassName
+DiskName = "DriverTestProgram Installation Disk"
+DriverTestProgram.DeviceDesc = "DriverTestProgram Device"
+DriverTestProgram.SVCDESC = "DriverTestProgram Service"
